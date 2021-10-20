@@ -1,0 +1,25 @@
+{
+  "name": "2-port",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "await": "^0.2.6",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.7.7",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
+    "node-schedule": "1.3.2",
+    "nodemailer": "^6.3.1",
+    "request": "^2.88.2",
+    "shelljs": "^0.8.4",
+    "silly-datetime": "^0.1.2"
+  }
+}
