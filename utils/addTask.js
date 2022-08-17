@@ -27,7 +27,14 @@ const addTask = function (task) {
         console.log(task.cron)
         const scheduleObj = schedule.scheduleJob(`${task.cron}`, function () {
           console.log('定时任务', task);
-          doTask(task)
+          if (task.offset && Number(task.offset) > 0) {
+            const delay = Math.random() * task.offset * 60 * 1000
+            setTimeout(() => {
+              doTask(task)
+            }, delay)
+          } else {
+            doTask(task)
+          }
         });
         global.taskArr.push({
           id: task.id,

@@ -9,6 +9,10 @@ var memoSchema = new Schema({
     cron: String,
     username:String,
     userid: String,
+    offset: { // 延时执行，随机在偏移区间里执行
+        type: Number,
+        default: 0 // 分钟
+    },
     status:{
         type:Boolean,
         default:true

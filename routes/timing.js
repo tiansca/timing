@@ -23,6 +23,7 @@ router.post('/add',function(req, res, next) {
         cron:req.body.cron,
         username:req.body.username,
         userid:req.body.userid,
+        offset: req.body.offset || 0
     }
     Timing.create(postData,async function (err, data) {
         if (err) throw err;
@@ -100,7 +101,8 @@ router.post('/update',function(req, res, next) {
             username:req.body.username,
             userid:req.body.userid,
             status: req.body.status,
-            _id:req.body._id
+            _id:req.body._id,
+            offset: req.body.offset
         };
         // console.log('****', postData)
         Timing.findOne({"_id":postData._id},function (err, data) {
